@@ -5,6 +5,8 @@ var ecc = 0.3;
 var omega = 1.0;
 var phi = 0.0;
 
+var volume = 0.3;
+
 private var theta = Mathf.PI;
 
 function Start() {
@@ -20,5 +22,5 @@ function Update() {
 
 	theta += omega / (r * r);
 
-	audio.volume = (1.0 + Mathf.Cos(theta)) / 2;
+	audio.volume = (1.0 + Mathf.Cos(theta)) * volume / 2;
 }

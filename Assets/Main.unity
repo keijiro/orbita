@@ -177,6 +177,7 @@ GameObject:
   - 92: {fileID: 2117994709}
   - 124: {fileID: 2117994708}
   - 81: {fileID: 2117994707}
+  - 166: {fileID: 2117994713}
   - 164: {fileID: 2117994712}
   m_Layer: 0
   m_Name: Main Camera
@@ -268,3 +269,18 @@ AudioReverbFilter:
   m_LFReference: 250
   m_ReflectionsDelay: 0
   m_ReverbPreset: 26
+--- !u!166 &2117994713
+AudioChorusFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2117994706}
+  m_Enabled: 1
+  m_DryMix: .5
+  m_WetMix1: .5
+  m_WetMix2: .5
+  m_WetMix3: .5
+  m_Delay: 80
+  m_Rate: .800000012
+  m_Depth: .0199999996
+  m_FeedBack: 0

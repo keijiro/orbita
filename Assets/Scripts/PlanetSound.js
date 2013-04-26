@@ -7,13 +7,13 @@ static private var intervals = [0, 2, 4, 7, 9, 11]; // Pentatonic + IIV
 
 static private var globalIndex = 0;
 
-private var osc : Oscillator;
+private var osc : FMOscillator;
 
 function Awake() {
 	var interval = intervals[globalIndex % intervals.Length];
 	var octave = globalIndex / intervals.Length;
 
-	osc = Oscillator();
+	osc = FMOscillator();
 	osc.SetNote(baseNote + octave * 12 + interval);
 
 	globalIndex = (globalIndex + 1) % 12;
@@ -22,6 +22,7 @@ function Awake() {
 function Start() {
 	audio.clip = AudioClip.Create("(null)", 0xfffffff, 1, SynthConfig.kSampleRate, false, true, OnAudioRead);
 	audio.volume = 0;
+	yield WaitForSeconds(0.5);
     audio.Play();
 }
 
