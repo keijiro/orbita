@@ -1,20 +1,31 @@
 #pragma strict
 
 var prefab : GameObject;
+var spawned = ArrayList();
+
+var minusButtonTexture : Texture2D;
+var minusButtonStyle : GUIStyle;
+var emptyButtonStyle : GUIStyle;
 
 private function SpawnPlanet(pos : Vector3) {
-	return Instantiate(prefab, pos, Quaternion.identity) as GameObject;
+	var planet = Instantiate(prefab, pos, Quaternion.identity) as GameObject;
+	planet.renderer.material.color = FindObjectOfType(PlanetPalette).PickColor();
+	spawned.Add(planet);
 }
 
-function Start() {
-	var palette = FindObjectOfType(PlanetPalette);
+private function SpawnPlanetAtMousePosition() {
+	var pos = Vector3(Input.mousePosition.x, Input.mousePosition.y, Mathf.Abs(Camera.main.transform.position.z));
+	SpawnPlanet(Camera.main.ScreenToWorldPoint(pos));
+}
 
-	while (true) {
-		if (Input.GetMouseButtonDown(0)) {
-			var pos = Vector3(Input.mousePosition.x, Input.mousePosition.y, Mathf.Abs(Camera.main.transform.position.z));
-			var planet = SpawnPlanet(Camera.main.ScreenToWorldPoint(pos));
-			planet.renderer.material.color = palette.PickColor();
+function OnGUI() {
+	if (GUI.Button(Rect(32, 32, 32, 32), minusButtonTexture, minusButtonStyle)) {
+		if (spawned.Count > 0) {
+			(spawned[0] as GameObject).SendMessage("Terminate");
+			spawned.RemoveAt(0);
 		}
-		yield;
+	}
+	if (GUI.Button(Rect(0, 0, Screen.width, Screen.height), "", emptyButtonStyle)) {
+		SpawnPlanetAtMousePosition();
 	}
 }

@@ -24,3 +24,15 @@ function Update() {
 
 	audio.volume = (1.0 + Mathf.Cos(theta)) * volume / 2;
 }
+
+function Terminate() {
+	StartCoroutine(function() {
+		while (transform.localScale.x > 0.02) {
+			var e = Mathf.Exp(-4.0 * Time.deltaTime);
+			transform.localScale *= e;
+			volume *= e;
+			yield;
+		}
+		Destroy(gameObject);
+	}());
+}
