@@ -124,8 +124,9 @@ MonoBehaviour:
   m_Name: 
   radius: 5
   ecc: .5
-  omega: 1
+  omega: 60
   phi: 0
+  volume: .300000012
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

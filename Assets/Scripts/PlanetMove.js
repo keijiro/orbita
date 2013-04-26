@@ -20,7 +20,7 @@ function Update() {
 	transform.localPosition.x = r * Mathf.Cos(theta + phi);
 	transform.localPosition.y = r * Mathf.Sin(theta + phi);
 
-	theta += omega / (r * r);
+	theta += Time.deltaTime * omega / (r * r);
 
 	audio.volume = (1.0 + Mathf.Cos(theta)) * volume / 2;
 }

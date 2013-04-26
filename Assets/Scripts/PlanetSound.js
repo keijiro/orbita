@@ -20,9 +20,9 @@ function Awake() {
 }
 
 function Start() {
-	audio.clip = AudioClip.Create("(null)", 0xfffffff, 1, SynthConfig.kSampleRate, false, true, OnAudioRead);
+	audio.clip = AudioClip.Create("(null)", 0x7fffffff, 1, SynthConfig.kSampleRate, false, true, OnAudioRead);
 	audio.volume = 0;
-	yield WaitForSeconds(0.5);
+	yield WaitForSeconds(0.2);
     audio.Play();
 }
 
