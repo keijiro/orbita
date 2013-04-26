@@ -30,8 +30,8 @@ class FMOscillator {
 		cx += step;
 		mx -= Mathf.Floor(mx);
 		cx -= Mathf.Floor(cx);
-		var x = cx + modulation * fast_sin(kPi2 * mx);
+		var x = cx + modulation * Mathf.Sin(kPi2 * mx);
 		x -= Mathf.Floor(x);
-		return fast_sin(kPi2 * x);
+		return Mathf.Sin(kPi2 * x);
 	}
 }
