@@ -1,13 +1,12 @@
 #pragma strict
 
 static private var baseNote = 60;
-static private var clipLength = 2;
-
 static private var intervals = [0, 2, 4, 7, 9, 11]; // Pentatonic + IIV
-
 static private var globalIndex = 0;
 
 private var osc : FMOscillator;
+private var targetVolume = 0.0;
+private var realVolume = 0.0;
 
 function Awake() {
 	var interval = intervals[globalIndex % intervals.Length];
@@ -19,15 +18,13 @@ function Awake() {
 	globalIndex = (globalIndex + 1) % 12;
 }
 
-function Start() {
-	audio.clip = AudioClip.Create("(null)", 0x7fffffff, 1, SynthConfig.kSampleRate, false, true, OnAudioRead);
-	audio.volume = 0;
-	yield WaitForSeconds(0.2);
-    audio.Play();
+function Update() {
+	targetVolume = GetComponent.<PlanetMove>().volume * Globals.r.volume;
 }
 
-function OnAudioRead(data:float[]) {
-    for (var i = 0; i < data.Length; i++) {
-        data[i] = osc.Run();
+function OnAudioFilterRead(data : float[], channels : int) {
+    for (var i = 0; i < data.Length; i += 2) {
+        data[i] = data[i + 1] = osc.Run() * realVolume;
+    	realVolume = Mathf.Lerp(realVolume, targetVolume, 0.05);
     }
 }

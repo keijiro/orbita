@@ -1,11 +1,10 @@
 #pragma strict
 
 var radius = 1.0;
-var ecc = 0.3;
-var omega = 1.0;
 var phi = 0.0;
 
-var volume = 0.3;
+var volume = 0.0;
+var decay = 1.0;
 
 private var theta = Mathf.PI;
 
@@ -15,22 +14,22 @@ function Start() {
 }
 
 function Update() {
-	var r = radius / (1.0 + ecc * Mathf.Cos(theta));
+	var r = radius / (1.0 + Globals.r.orbitEcc * Mathf.Cos(theta));
 
 	transform.localPosition.x = r * Mathf.Cos(theta + phi);
 	transform.localPosition.y = r * Mathf.Sin(theta + phi);
 
-	theta += Time.deltaTime * omega / (r * r);
+	transform.localScale = Vector3.one * decay;
 
-	audio.volume = (1.0 + Mathf.Cos(theta)) * volume / 2;
+	volume = 0.5 * decay * (1.0 + Mathf.Cos(theta));
+
+	theta += Time.deltaTime * Globals.r.orbitOmega / (r * r);
 }
 
 function Terminate() {
 	StartCoroutine(function() {
-		while (transform.localScale.x > 0.02) {
-			var e = Mathf.Exp(-4.0 * Time.deltaTime);
-			transform.localScale *= e;
-			volume *= e;
+		while (decay > 0.02) {
+			decay *= Mathf.Exp(-4.0 * Time.deltaTime);
 			yield;
 		}
 		Destroy(gameObject);

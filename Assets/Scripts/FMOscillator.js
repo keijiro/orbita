@@ -1,8 +1,8 @@
 #pragma strict
 
 class FMOscillator {
-	var multiplier = 16.0;
-	var modulation = 0.005;
+	static var multiplier = 16.0;
+	static var modulation = 0.005;
 
 	private var mx = 0.0;
 	private var cx = 0.0;
