@@ -4,9 +4,9 @@ var radius = 1.0;
 var phi = 0.0;
 
 var volume = 0.0;
-var decay = 1.0;
 
 private var theta = Mathf.PI;
+private var decay = 1.0;
 
 function Start() {
 	radius = transform.position.magnitude / 2;
@@ -19,8 +19,6 @@ function Update() {
 	transform.localPosition.x = r * Mathf.Cos(theta + phi);
 	transform.localPosition.y = r * Mathf.Sin(theta + phi);
 
-	transform.localScale = Vector3.one * decay;
-
 	volume = 0.5 * decay * (1.0 + Mathf.Cos(theta));
 
 	theta += Time.deltaTime * Globals.r.orbitOmega / (r * r);
@@ -28,8 +26,15 @@ function Update() {
 
 function Terminate() {
 	StartCoroutine(function() {
+		var trail = GetComponent.<TrailRenderer>();
 		while (decay > 0.02) {
-			decay *= Mathf.Exp(-4.0 * Time.deltaTime);
+			var e = Mathf.Exp(-4.0 * Time.deltaTime);
+
+			decay *= e;
+			trail.time *= e;
+
+			transform.localScale = Vector3.one * decay;
+
 			yield;
 		}
 		Destroy(gameObject);
