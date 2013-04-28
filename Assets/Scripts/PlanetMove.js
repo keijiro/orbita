@@ -1,10 +1,7 @@
 #pragma strict
 
-var radius = 1.0;
-var phi = 0.0;
-
-var volume = 0.0;
-
+private var radius = 1.0;
+private var phi = 0.0;
 private var theta = Mathf.PI;
 private var decay = 1.0;
 
@@ -19,7 +16,7 @@ function Update() {
 	transform.localPosition.x = r * Mathf.Cos(theta + phi);
 	transform.localPosition.y = r * Mathf.Sin(theta + phi);
 
-	volume = 0.5 * decay * (1.0 + Mathf.Cos(theta));
+	audio.volume = Globals.r.volume * 0.5 * decay * (1.0 + Mathf.Cos(theta));
 
 	theta += Time.deltaTime * Globals.r.orbitOmega / (r * r);
 }

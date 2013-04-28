@@ -13,6 +13,7 @@ class FMOscillator {
 	function SetNote(note : int) {
 		var freq = 440.0 * Mathf.Pow(2.0, 1.0 * (note - 69) / 12.0);
 		step = freq / SynthConfig.kSampleRate;
+		return 1.0 / step;
 	}
 	
 	function Run() {
