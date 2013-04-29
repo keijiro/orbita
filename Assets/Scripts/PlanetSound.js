@@ -1,7 +1,14 @@
 #pragma strict
 
 static private var baseNote = 60;
-static private var intervals = [0, 2, 4, 7, 9, 11]; // Pentatonic + IIV
+
+static private var intervals =
+//[0, 2, 4, 7, 9];			// Pentatonic
+//[0, 2, 4, 5, 7, 9, 11];	// Diatonic
+//[0, 2, 3, 4, 7, 9];		// Pentatonic + IIV
+//[0, 2, 3, 4, 7, 9];		// Major blues
+[0, 4, 5, 7, 11];			// Ryukyu
+
 static private var globalIndex = 0;
 
 function Awake() {
