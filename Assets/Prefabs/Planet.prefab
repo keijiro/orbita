@@ -131,7 +131,7 @@ TrailRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_Time: .5
+  m_Time: .800000012
   m_StartWidth: .100000001
   m_EndWidth: .0599999987
   m_Colors:
@@ -140,13 +140,13 @@ TrailRenderer:
       rgba: 2155905152
     m_Color[1]:
       serializedVersion: 2
-      rgba: 2155905152
+      rgba: 1669365888
     m_Color[2]:
       serializedVersion: 2
-      rgba: 2155905152
+      rgba: 1098940544
     m_Color[3]:
       serializedVersion: 2
-      rgba: 2155905152
+      rgba: 528515200
     m_Color[4]:
       serializedVersion: 2
       rgba: 8421504
