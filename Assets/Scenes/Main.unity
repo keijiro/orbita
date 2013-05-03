@@ -414,6 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b28add9ef98f41b1801686ce9241827, type: 3}
   m_Name: 
   variation: 24
+  brightness: .800000012
 --- !u!1 &2117994706
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,7 +467,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: .171641767, g: .171641767, b: .171641767, a: .0196078438}
+  m_BackGroundColor: {r: .947761178, g: .943903267, b: .92654264, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
