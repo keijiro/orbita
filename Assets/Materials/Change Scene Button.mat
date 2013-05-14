@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Origin
+  m_Name: Change Scene Button
   m_Shader: {fileID: 4800000, guid: 07146e3e2a7b74dfc8d6d176a29f8e97, type: 3}
   m_ShaderKeywords: []
   m_SavedProperties:
@@ -16,7 +16,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 204a8ec6259934aa1b6673a9479245ba, type: 3}
+          m_Texture: {fileID: 2800000, guid: 56332e89a2af64ab7a95106cd5075941, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats: {}

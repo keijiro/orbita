@@ -20,7 +20,7 @@ private function DoTouch(screenCoord : Vector3) {
 	var ray = Camera.main.ScreenPointToRay(screenCoord);
 	var hit : RaycastHit;
 	if (Physics.Raycast(ray, hit) && hit.collider) {
-		if (hit.collider.name == "Decrement Button") {
+		if (hit.collider.name == "Erase Button") {
 			spawner.RemoveOldestPlanet();
 			return;
 		}
