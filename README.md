@@ -1,1 +1,1 @@
-Orbita - Play a music with planetary movement
+Orbita - Experimental music sequencer with planetary movements
