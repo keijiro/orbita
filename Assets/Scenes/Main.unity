@@ -204,7 +204,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 048d84f3f68fa4a23a85b337ad371ca4, type: 3}
   m_Name: 
-  mode: 1
+  normalizedOffset: {x: 1, y: 1}
 --- !u!1 &1239335445
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 048d84f3f68fa4a23a85b337ad371ca4, type: 3}
   m_Name: 
-  mode: 0
+  normalizedOffset: {x: 0, y: 1}
 --- !u!23 &1661263066
 Renderer:
   m_ObjectHideFlags: 0
