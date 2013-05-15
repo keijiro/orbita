@@ -1,14 +1,10 @@
-Shader "Custom/Sprite" {
+Shader "Custom/Mat" {
 	Properties {
-		_MainTex ("Base (RGBA)", 2D) = "white" {}
-		_Color ("Color (RGBA)", Color) = (1, 1, 1, 1)
+		_MainTex ("Base (RGB)", 2D) = "white" {}
+		_Color ("Color (RGB)", Color) = (1, 1, 1, 1)
 	}
 	SubShader {
-		Tags { "Queue" = "Transparent" }
-		
 		Pass {
-			Blend SrcAlpha OneMinusSrcAlpha
-
 			CGPROGRAM
 	
 			#pragma vertex vert
