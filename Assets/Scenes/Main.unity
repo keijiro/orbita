@@ -440,6 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b28add9ef98f41b1801686ce9241827, type: 3}
   m_Name: 
   variation: 24
+  luma: .100000001
 --- !u!1 &2117994706
 GameObject:
   m_ObjectHideFlags: 0
