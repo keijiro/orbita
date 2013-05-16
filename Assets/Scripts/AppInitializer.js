@@ -1,5 +1,7 @@
 #pragma strict
 
+var autoLoading = true;
+
 function Start() {
 	yield;
 
@@ -27,5 +29,5 @@ function Start() {
 	yield;
 	yield;
 
-	Application.LoadLevel(1);
+	if (autoLoading) Application.LoadLevel(1);
 }
