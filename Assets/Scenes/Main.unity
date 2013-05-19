@@ -139,6 +139,7 @@ GameObject:
   - 23: {fileID: 1206805903}
   - 114: {fileID: 1206805907}
   - 135: {fileID: 1206805904}
+  - 114: {fileID: 1206805908}
   m_Layer: 0
   m_Name: Change Scene Button
   m_TagString: Button
@@ -205,6 +206,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048d84f3f68fa4a23a85b337ad371ca4, type: 3}
   m_Name: 
   normalizedOffset: {x: 1, y: 1}
+--- !u!114 &1206805908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1206805902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a2c14990f3842339f72df892bd9fda, type: 3}
+  m_Name: 
 --- !u!1 &1239335445
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,6 +352,7 @@ GameObject:
   - 114: {fileID: 1661263065}
   - 135: {fileID: 1661263064}
   - 114: {fileID: 1661263069}
+  - 114: {fileID: 1661263070}
   m_Layer: 0
   m_Name: Erase Button
   m_TagString: Button
@@ -416,6 +428,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d9f9614d7a044762854f7ddf578e859, type: 3}
+  m_Name: 
+--- !u!114 &1661263070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1661263063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a2c14990f3842339f72df892bd9fda, type: 3}
   m_Name: 
 --- !u!1 &1714162555
 GameObject:
