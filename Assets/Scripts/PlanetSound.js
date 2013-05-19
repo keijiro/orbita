@@ -1,11 +1,11 @@
 #pragma strict
 
 static private var scales = [
+	[0, 4, 5, 7, 11],		// Ryukyu
 	[0, 2, 4, 7, 9],		// Pentatonic
 	[0, 2, 4, 5, 7, 9, 11],	// Diatonic
 	[0, 2, 3, 4, 7, 9],		// Pentatonic + IIV
-	[0, 2, 3, 4, 7, 9],		// Major blues
-	[0, 4, 5, 7, 11]		// Ryukyu
+	[0, 2, 3, 4, 7, 9]		// Major blues
 ];
 
 function Awake() {

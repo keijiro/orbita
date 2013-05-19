@@ -237,6 +237,7 @@ GameObject:
   - 4: {fileID: 1239335449}
   - 33: {fileID: 1239335448}
   - 23: {fileID: 1239335446}
+  - 114: {fileID: 1239335447}
   m_Layer: 0
   m_Name: BG
   m_TagString: Untagged
@@ -262,6 +263,22 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+--- !u!114 &1239335447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1239335445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16a5791c004ca410ab6a831956a06623, type: 3}
+  m_Name: 
+  colors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: .996078432, g: .988235295, b: .749019623, a: 1}
+  - {r: .776470602, g: .97647059, b: .992156863, a: 1}
+  - {r: .78039217, g: .97647059, b: .796078444, a: 1}
+  - {r: .713725507, g: .737254918, b: .980392158, a: 1}
 --- !u!33 &1239335448
 MeshFilter:
   m_ObjectHideFlags: 0
