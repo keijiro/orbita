@@ -140,6 +140,7 @@ GameObject:
   - 114: {fileID: 1206805907}
   - 135: {fileID: 1206805904}
   - 114: {fileID: 1206805908}
+  - 114: {fileID: 1206805909}
   m_Layer: 0
   m_Name: Change Scene Button
   m_TagString: Button
@@ -215,6 +216,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17a2c14990f3842339f72df892bd9fda, type: 3}
+  m_Name: 
+--- !u!114 &1206805909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1206805902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b07be544cfa434cb357db4118dbead, type: 3}
   m_Name: 
 --- !u!1 &1239335445
 GameObject:
@@ -337,8 +348,12 @@ MonoBehaviour:
   volume: .200000003
   orbitEcc: .5
   orbitOmega: 60
+  baseNote: 60
+  planetVariation: 12
   fmMultiplier: 16
   fmModulation: .00499999989
+  sceneIndex: 0
+  planetIndex: 0
 --- !u!1 &1661263063
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +540,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b28add9ef98f41b1801686ce9241827, type: 3}
   m_Name: 
-  variation: 24
   luma: .100000001
 --- !u!1 &2117994706
 GameObject:

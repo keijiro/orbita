@@ -19,3 +19,10 @@ function RemoveOldestPlanet() {
 		spawned.RemoveAt(0);
 	}
 }
+
+function RemoveAllPlanets() {
+	for (var planet in spawned) {
+		(planet as GameObject).SendMessage("Terminate");
+	}
+	spawned.Clear();
+}
