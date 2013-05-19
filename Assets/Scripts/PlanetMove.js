@@ -30,7 +30,7 @@ function Terminate() {
 			decay *= e;
 			trail.time *= e;
 
-			transform.localScale = Vector3.one * decay;
+			transform.localScale *= e;
 
 			yield;
 		}
