@@ -6,7 +6,7 @@ PlayerSettings:
   serializedVersion: 2
   AndroidProfiler: 0
   defaultScreenOrientation: 3
-  targetDevice: 1
+  targetDevice: 2
   targetGlesGraphics: 1
   targetResolution: 0
   accelerometerFrequency: 0
@@ -88,7 +88,8 @@ PlayerSettings:
   uIExitOnSuspend: 0
   uIStatusBarStyle: 0
   iPhoneSplashScreen: {fileID: 0}
-  iPhoneHighResSplashScreen: {fileID: 0}
+  iPhoneHighResSplashScreen: {fileID: 2800000, guid: 6c993e0638e454e5a99b3e4eb4ea4587,
+    type: 3}
   iPhoneTallHighResSplashScreen: {fileID: 0}
   iPadPortraitSplashScreen: {fileID: 0}
   iPadHighResPortraitSplashScreen: {fileID: 0}
@@ -109,7 +110,7 @@ PlayerSettings:
     m_Icons:
     - m_Icon: {fileID: 2800000, guid: db2c969d995d2457caa8cf4709563b26, type: 3}
       m_Size: 144
-    - m_Icon: {fileID: 0}
+    - m_Icon: {fileID: 2800000, guid: 0ed28d554b1a94b06a3ca564954a813b, type: 3}
       m_Size: 114
     - m_Icon: {fileID: 0}
       m_Size: 72
