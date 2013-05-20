@@ -22,6 +22,8 @@ function Update() {
 }
 
 function Terminate() {
+	GetComponentInChildren.<ParticleSystem>().Play();
+
 	StartCoroutine(function() {
 		var trail = GetComponent.<TrailRenderer>();
 		while (decay > 0.02) {
@@ -34,6 +36,7 @@ function Terminate() {
 
 			yield;
 		}
+		yield WaitForSeconds(0.5);
 		Destroy(gameObject);
 	}());
 }
