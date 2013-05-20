@@ -112,9 +112,9 @@ PlayerSettings:
       m_Size: 144
     - m_Icon: {fileID: 2800000, guid: 0ed28d554b1a94b06a3ca564954a813b, type: 3}
       m_Size: 114
-    - m_Icon: {fileID: 0}
+    - m_Icon: {fileID: 2800000, guid: 15ad5b59f927d4430aa1ab4a345ac649, type: 3}
       m_Size: 72
-    - m_Icon: {fileID: 0}
+    - m_Icon: {fileID: 2800000, guid: 86f9d6e99adc94c498b9e3af6f02e804, type: 3}
       m_Size: 57
   m_BuildTargetBatching: []
   webPlayerTemplate: APPLICATION:Default
