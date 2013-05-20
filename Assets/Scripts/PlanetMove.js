@@ -22,7 +22,9 @@ function Update() {
 }
 
 function Terminate() {
-	GetComponentInChildren.<ParticleSystem>().Play();
+	for (var ps in GetComponentsInChildren.<ParticleSystem>()) {
+		ps.Play();
+	}
 
 	StartCoroutine(function() {
 		var trail = GetComponent.<TrailRenderer>();
