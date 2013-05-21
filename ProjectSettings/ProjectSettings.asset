@@ -90,7 +90,8 @@ PlayerSettings:
   iPhoneSplashScreen: {fileID: 2800000, guid: 44e886a0ebe424a0c853fef1ef4f1032, type: 3}
   iPhoneHighResSplashScreen: {fileID: 2800000, guid: 6c993e0638e454e5a99b3e4eb4ea4587,
     type: 3}
-  iPhoneTallHighResSplashScreen: {fileID: 0}
+  iPhoneTallHighResSplashScreen: {fileID: 2800000, guid: d3efbc49daf264e47a39099ef41724fc,
+    type: 3}
   iPadPortraitSplashScreen: {fileID: 0}
   iPadHighResPortraitSplashScreen: {fileID: 0}
   iPadLandscapeSplashScreen: {fileID: 2800000, guid: db09249403cc440cc8278cd9bfb1a693,
