@@ -15,8 +15,8 @@ function Update() {
 
 	transform.localPosition.x = r * Mathf.Cos(theta + phi);
 	transform.localPosition.y = r * Mathf.Sin(theta + phi);
-
-	audio.volume = Globals.r.volume * 0.5 * decay * (1.0 + Mathf.Cos(theta));
+	
+	audio.volume = VolumeAdjuster.volume * 0.5 * decay * (1.0 + Mathf.Cos(theta));
 
 	theta += Time.deltaTime * Globals.r.orbitOmega / (r * r);
 }
