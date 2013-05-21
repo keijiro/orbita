@@ -373,7 +373,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7038941e1ee8841828cbc7a96308b5c6, type: 3}
   m_Name: 
-  volume: .300000012
+  volume: .699999988
   orbitEcc: .5
   orbitOmega: 60
   baseNote: 60
@@ -620,7 +620,6 @@ GameObject:
   - 92: {fileID: 2117994709}
   - 124: {fileID: 2117994708}
   - 81: {fileID: 2117994707}
-  - 170: {fileID: 2117994714}
   - 166: {fileID: 2117994713}
   - 164: {fileID: 2117994712}
   m_Layer: 0
@@ -728,11 +727,3 @@ AudioChorusFilter:
   m_Rate: .800000012
   m_Depth: .0199999996
   m_FeedBack: 0
---- !u!170 &2117994714
-AudioDistortionFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2117994706}
-  m_Enabled: 1
-  m_DistortionLevel: .0199999996

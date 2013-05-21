@@ -8,13 +8,14 @@ static private var scales = [
 	[0, 2, 3, 4, 7, 9]		// Major blues
 ];
 
+
 function Awake() {
 	var intervals = scales[Globals.r.sceneIndex];
 	var interval = intervals[Globals.r.planetIndex % intervals.Length];
 	var octave = Globals.r.planetIndex / intervals.Length;
 
 	var osc = FMOscillator();
-	var length = Mathf.RoundToInt(osc.SetNote(Globals.r.baseNote + octave * 12 + interval) * 50);
+	var length = Mathf.RoundToInt(osc.SetNote(Globals.r.baseNote + octave * 12 + interval));
 
 	audio.clip = AudioClip.Create("", length, 1, SynthConfig.kSampleRate, false, false);
 
