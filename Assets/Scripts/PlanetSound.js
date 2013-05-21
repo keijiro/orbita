@@ -14,7 +14,7 @@ function Awake() {
 	var octave = Globals.r.planetIndex / intervals.Length;
 
 	var osc = FMOscillator();
-	var length = osc.SetNote(Globals.r.baseNote + octave * 12 + interval) * 10;
+	var length = Mathf.RoundToInt(osc.SetNote(Globals.r.baseNote + octave * 12 + interval) * 50);
 
 	audio.clip = AudioClip.Create("", length, 1, SynthConfig.kSampleRate, false, false);
 
