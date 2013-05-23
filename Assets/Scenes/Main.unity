@@ -98,7 +98,7 @@ Transform:
   m_GameObject: {fileID: 1329674}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: -1.62920685e-07}
   m_LocalPosition: {x: 4.5, y: -2, z: -2}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 614988963}
   m_Father: {fileID: 1268272053}
@@ -265,7 +265,7 @@ Transform:
   m_GameObject: {fileID: 898287431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.5, y: -2, z: -2}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1269192272}
   m_Father: {fileID: 1268272053}
@@ -317,12 +317,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be3c66e0095da4b4d8b8a237278a07db, type: 3}
   m_Name: 
-  texts:
-  - TAP THE SCREEN TO CREATE A PLANET.
-  - YOU CAN CREATE PLANETS AS MANY AS YOU LIKE.
-  - YOU CAN REMOVE THE OLDEST PLANET BY PRESSING THIS BUTTON.
-  - PRESS THIS BUTTON TO CHANGE THE SCENE.
-  - IT CHANGES NOT ONLY THE BACKGROUND COLOR BUT ALSO THE COLOR OF MUSIC.
   textStyle:
     m_Name: 
     m_Normal:
@@ -473,6 +467,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17a2c14990f3842339f72df892bd9fda, type: 3}
   m_Name: 
+  actionCount: 0
 --- !u!114 &1206805909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -794,6 +789,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17a2c14990f3842339f72df892bd9fda, type: 3}
   m_Name: 
+  actionCount: 0
 --- !u!1 &1714162555
 GameObject:
   m_ObjectHideFlags: 0

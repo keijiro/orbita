@@ -1,5 +1,8 @@
 #pragma strict
 
+@HideInInspector
+var actionCount = 0;
+
 function OnButtonPressed() {
 	StartCoroutine(function () {
 		var b = 0.5;
@@ -10,4 +13,5 @@ function OnButtonPressed() {
 		}
 		renderer.material.color = Color.white;
 	}());
+	actionCount++;
 }
