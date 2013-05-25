@@ -377,6 +377,10 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   fadingSpeed: 3
+  greetings:
+  - HELLO! HOW ARE YOU TODAY?
+  - WELCOME BACK TO ORBITA!
+  - LET"S MAKE MUSIC WITH ORBITA!
 --- !u!1 &1206805902
 GameObject:
   m_ObjectHideFlags: 0

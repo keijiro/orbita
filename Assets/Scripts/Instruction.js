@@ -2,7 +2,9 @@
 
 var textStyle : GUIStyle;
 var fadingSpeed = 6.0;
+var greetings : String[];
 
+private var kCountKey = "instructed";
 private var text = "";
 private var alpha = 0.0;
 
@@ -37,7 +39,7 @@ function WaitForSecondsAndButtonAction(buttonName : String) {
 	var button = GameObject.Find(buttonName).GetComponent.<ButtonReaction>();
 	var elapsed = 0.0;
 
-	yield WaitForSeconds(1.0);
+	yield WaitForSeconds(0.5);
 
 	button.actionCount = 0;
 	
@@ -45,53 +47,59 @@ function WaitForSecondsAndButtonAction(buttonName : String) {
 		elapsed += Time.deltaTime;
 		yield;
 	}
+
+	yield WaitForSeconds(0.5);
 }
 
 function Start() {
 	textStyle.fontSize = Mathf.FloorToInt(Screen.width / 300) * 10;
-	
-	yield WaitForSeconds(0.5);
-
-	text = "TAP THE SCREEN TO CREATE A PLANET.";
-	yield StartCoroutine(FadeIn());
-	yield StartCoroutine(WaitForSecondsAndClicks(1, 2, 1));
-	yield StartCoroutine(FadeOut());
-	
-	yield WaitForSeconds(1.0);
-	
-	text = "YOU CAN CREATE PLANETS AS MANY AS YOU LIKE.";
-	yield StartCoroutine(FadeIn());
-	yield StartCoroutine(WaitForSecondsAndClicks(1, 2, 1));
-	yield StartCoroutine(FadeOut());
-	
-	yield WaitForSeconds(2.0);
-
-	var arrow = transform.parent.Find("Arrow Left").gameObject;
-	arrow.SetActive(true);
-
-	text = "YOU CAN REMOVE THE OLDEST PLANET BY PRESSING THIS BUTTON.";
-	yield StartCoroutine(FadeIn());
-	yield StartCoroutine(WaitForSecondsAndButtonAction("Erase Button"));
-	arrow.BroadcastMessage("Dismiss");
-	yield StartCoroutine(FadeOut());
-
-	yield WaitForSeconds(2.0);
-
-	arrow = transform.parent.Find("Arrow Right").gameObject;
-	arrow.SetActive(true);
-
-	text = "PRESS THIS BUTTON TO CHANGE THE SCENE.";
-	yield StartCoroutine(FadeIn());
-	yield StartCoroutine(WaitForSecondsAndButtonAction("Change Scene Button"));
-	arrow.BroadcastMessage("Dismiss");
-	yield StartCoroutine(FadeOut());
 
 	yield WaitForSeconds(0.5);
 
-	text = "IT CHANGES NOT ONLY THE BACKGROUND COLOR BUT ALSO THE COLOR OF MUSIC!";
-	yield StartCoroutine(FadeIn());
-	yield StartCoroutine(WaitForSecondsAndClicks(1, 4, 1));
-	yield StartCoroutine(FadeOut());
+	if (PlayerPrefs.GetInt(kCountKey) == 0) {
+		text = "TAP THE SCREEN TO CREATE A PLANET.";
+		yield StartCoroutine(FadeIn());
+		yield StartCoroutine(WaitForSecondsAndClicks(1, 2, 1));
+		yield StartCoroutine(FadeOut());
+		
+		yield WaitForSeconds(1.0);
+		
+		text = "YOU CAN CREATE PLANETS AS MANY AS YOU LIKE.";
+		yield StartCoroutine(FadeIn());
+		yield StartCoroutine(WaitForSecondsAndClicks(1, 2, 1));
+		yield StartCoroutine(FadeOut());
+		
+		yield WaitForSeconds(2.0);
+
+		var arrow = transform.parent.Find("Arrow Left").gameObject;
+		arrow.SetActive(true);
+
+		text = "YOU CAN REMOVE THE OLDEST PLANET BY PRESSING THIS BUTTON.";
+		yield StartCoroutine(FadeIn());
+		yield StartCoroutine(WaitForSecondsAndButtonAction("Erase Button"));
+		arrow.BroadcastMessage("Dismiss");
+		yield StartCoroutine(FadeOut());
+
+		yield WaitForSeconds(2.0);
+
+		arrow = transform.parent.Find("Arrow Right").gameObject;
+		arrow.SetActive(true);
+
+		text = "PRESS THIS BUTTON TO CHANGE THE SCENE.";
+		yield StartCoroutine(FadeIn());
+		yield StartCoroutine(WaitForSecondsAndButtonAction("Change Scene Button"));
+		arrow.BroadcastMessage("Dismiss");
+		yield StartCoroutine(FadeOut());
+
+		yield WaitForSeconds(0.5);
+
+		text = "IT CHANGES NOT ONLY THE BACKGROUND COLOR BUT ALSO THE COLOR OF MUSIC!";
+		yield StartCoroutine(FadeIn());
+		yield StartCoroutine(WaitForSecondsAndClicks(1, 4, 1));
+		yield StartCoroutine(FadeOut());
+	}
+
+	PlayerPrefs.SetInt(kCountKey, PlayerPrefs.GetInt(kCountKey) + 1);
 }
 
 function OnGUI() {
