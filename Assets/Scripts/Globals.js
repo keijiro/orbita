@@ -39,7 +39,7 @@ function Update() {
 }
 
 function ChangeScene() {
-	if (++sceneIndex == 5) sceneIndex = 0;
+	if (++sceneIndex == 3) sceneIndex = 0;
 	planetIndex = 0;
 }
 

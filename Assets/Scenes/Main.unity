@@ -530,10 +530,8 @@ MonoBehaviour:
   m_Name: 
   colors:
   - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: .987206817, b: .597014904, a: 1}
-  - {r: 1, g: .559701502, b: .559701502, a: 1}
-  - {r: .485074639, g: 1, b: .526268601, a: 1}
-  - {r: .5, g: .544117689, b: 1, a: 1}
+  - {r: .501960814, g: .968627453, b: .714082062, a: 1}
+  - {r: 1, g: .972549021, b: .647058845, a: 1}
 --- !u!33 &1239335448
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -688,7 +686,7 @@ MonoBehaviour:
   orbitEcc: .5
   orbitOmega: 60
   baseNote: 60
-  planetVariation: 12
+  planetVariation: 20
   fmMultiplier: 16
   fmModulation: .00499999989
   sceneIndex: 0
