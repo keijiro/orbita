@@ -1,74 +1,98 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Orbita : Experimental music sequencer with planetary movements" />
+    <meta charset='utf-8'>
+    <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:200' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+      body {
+        background-image:url('images/BG.png');
+        font-family: 'Terminal Dosis', sans-serif;
+        color: white;
+      }
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+      img {
+        border: none;
+        margin: 0px 1em;
+      }
 
-    <title>Orbita</title>
+      h2 {
+        margin-top: 66px;
+        font-size: 26pt;
+        font-weight: normal;
+      }
+
+      p {
+        font-size: 16pt;
+        margin: 2em 0px;
+      }
+
+      p.jp {
+        font-size: 10pt;
+        font-family: "Hiragino Maru Gothic ProN", sans-serif;
+      }
+
+      a {
+        color: #ccf;
+        text-decoration: none;
+      }
+
+      div.title {
+        text-align: center;
+        margin-top: 80px;
+        margin-bottom: 60px;
+      }
+
+      div.imgset {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      div.body {
+        width: 500px;
+        margin: 0pt auto;
+      }
+
+      div.footer {
+        margin: 80px auto;
+        text-align: center;
+      }
+
+      div.footer a {
+        color: white;
+      }
+    </style>
+    <title>Orbita - Planetary Orbit Music Sequencer</title>
   </head>
-
   <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/keijiro/orbita">View on GitHub</a>
-
-          <h1 id="project_title">Orbita</h1>
-          <h2 id="project_tagline">Experimental music sequencer with planetary movements</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/keijiro/orbita/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/keijiro/orbita/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+    <div class="title">
+      <img src="images/Logo.png" />
     </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
+    <div class="imgset">
+      <!--
+      <iframe src="http://player.vimeo.com/video/51845377?byline=0&amp;portrait=0" width="480" height="270" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+    -->
+      <iframe class="vine-embed" src="https://vine.co/v/b9nOPlxJTYY/embed/simple" width="320" height="320" frameborder="0"></iframe><script async src="//platform.vine.co/static/scripts/embed.js" charset="utf-8"></script>
+      <p><small>(The video above is not a final version.)</small></p>
     </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Orbita maintained by <a href="https://github.com/keijiro">keijiro</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
+    <div class="imgset">
+      <!--
+      <a href="https://itunes.apple.com/us/app/arpie/id570542456?ls=1&mt=8"><img src="images/AppStore.png" /></a>
+      <a href="https://play.google.com/store/apps/details?id=jp.radiumsoftware.arpie"><img src="images/PlayStore.png" /></a>
+    -->
+      <img src="images/AppStore.png" />
+      <img src="images/PlayStore.png" />
     </div>
-
-    
-
+    <div class="body">
+      <h2>Make music, from the planetary orbits.</h2>
+      <p><b>Orbita</b> is a fun and easy music making app which turns planetary movements into musical harmonies.
+        You can create dreamy and fantastic sounds with only tapping the screen of your mobile device.
+        In spite of its simplicity and intuitiveness, it gives you a great variety and possibility of music.</p>
+        <p>Let's explore the universe of music, with <b>Orbita</b>!</p>
+      <h2>Source code</h2>
+      <p><a href="https://github.com/keijiro/orbita">Fork me on GitHub!</a></p>
+    </div>
+    <div class="footer">
+      © 2013 <a href="https://github.com/keijiro">Keijiro Takahashi</a> / <a href="http://www.radiumsoftware.com">Radium Software</a>
+    </div>
   </body>
 </html>
