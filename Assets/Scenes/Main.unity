@@ -682,11 +682,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7038941e1ee8841828cbc7a96308b5c6, type: 3}
   m_Name: 
-  volume: .699999988
+  volume: .600000024
   orbitEcc: .5
   orbitOmega: 60
   baseNote: 60
-  planetVariation: 20
+  planetVariation: 16
   fmMultiplier: 16
   fmModulation: .00499999989
   sceneIndex: 0
